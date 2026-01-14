@@ -29,6 +29,21 @@
 		<param-value>Pune</param-value>
 	</context-param>
 
+	<servlet>
+		<servlet-name>ServletD</servlet-name>
+		<servlet-class>com.mysecondwebapp.servlets.ServletD</servlet-class>
+		<init-param>
+			<param-name>classroom</param-name>
+			<param-value>6</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ServletD</servlet-name>
+		<url-pattern>/ServletD</url-pattern>
+	</servlet-mapping>
+
+  
 
 
 </web-app>
