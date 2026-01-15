@@ -7,5 +7,6 @@
 <a href='index.jsp'>Home</a>
 <a href='loginpage.jsp'>Login</a>
 <a href='logoutpage.jsp'>Logout</a>
+<a href='products.jsp'>Products</a>
 
 </div>
