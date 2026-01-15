@@ -12,7 +12,7 @@ if(login.equals("Jai") && password.equals("Veeru"))
 {
 	session.setAttribute("user", login);
 %>
-<h3>Welcome <%= login %></h3>
+<jsp:forward page="index.jsp"></jsp:forward>
 <%
 }
 else
