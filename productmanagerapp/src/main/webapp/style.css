@@ -10,3 +10,14 @@ table,tr,th,td {
 	padding:5px;
 }
 
+a:hover {
+	background-color: yellow;
+}
+
+tr:hover {
+	background-color: grey;
+}
+
+.err{
+	color:red;
+}
