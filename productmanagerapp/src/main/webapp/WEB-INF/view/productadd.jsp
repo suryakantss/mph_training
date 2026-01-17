@@ -26,6 +26,7 @@
 					class='err'>*</span>
 			</div>
 			<div>
+			<p>*<i>required fields</i></p>
 				<button>Save</button>
 			</div>
 		</form>

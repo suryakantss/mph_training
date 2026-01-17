@@ -15,14 +15,23 @@
 			<th>Code</th>
 			<th>Name</th>
 			<th>Price</th>
+			<th>Del</th>
 		</tr>
 		<c:forEach var="p" items="${products}">
 			<tr>
 				<td>${p.code}</td>
 				<td>${p.name}</td>
 				<td>${p.price}</td>
+				<td>
+				<form action="productspage" method="get">
+				<input type="hidden" name="op" value="del">
+				<input type="hidden" name="code" value="${p.code}">
+				<button>X</button>
+				</form>
+				</td>
 			</tr>
 		</c:forEach>
+		
 	</table>
 </body>
 </html>

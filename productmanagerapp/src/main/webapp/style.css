@@ -1,12 +1,12 @@
 *{
-	font-size: 24px;
+	font-size: 20px;
 	font-family: sans-serif;
 	margin: 5px;
 }
 table,tr,th,td {
 	border: 1px solid grey;
 	border-collapse: collapse;
-	width: 800px;
+	width: 900px;
 	padding:5px;
 }
 

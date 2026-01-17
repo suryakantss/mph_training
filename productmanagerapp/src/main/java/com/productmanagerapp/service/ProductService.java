@@ -11,9 +11,12 @@ public class ProductService {
 	public List<Product> getProducts() {
 		return productDAO.findAll();
 	}
-	
+
 	public Product addProduct(Product product) {
 		return productDAO.save(product);
 	}
 
+	public String delProduct(String code) {
+		return productDAO.delete(code);
+	}
 }
