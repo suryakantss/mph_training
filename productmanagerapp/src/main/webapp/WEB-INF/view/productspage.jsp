@@ -23,15 +23,22 @@
 				<td>${p.name}</td>
 				<td>${p.price}</td>
 				<td>
-				<form action="productspage" method="get">
-				<input type="hidden" name="op" value="del">
-				<input type="hidden" name="code" value="${p.code}">
-				<button>X</button>
-				</form>
+					<form action="productspage" method="get" onsubmit="return doCheck();">
+						<input type="hidden" name="op" value="del">
+						<input type="hidden" name="code" value="${p.code}">
+						<button>X</button>
+					</form>
 				</td>
 			</tr>
 		</c:forEach>
-		
 	</table>
+	<script type="text/javascript">
+		function doCheck() {
+			if(prompt('Are you sure ?') == 'y')
+			return true;
+			else
+			return false;
+		}
+	</script>
 </body>
 </html>

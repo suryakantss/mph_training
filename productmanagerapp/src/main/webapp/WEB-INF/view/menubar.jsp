@@ -4,4 +4,5 @@
 <a href="homepage">Home</a>
 <a href="productspage?op=list">List</a>
 <a href="productspage?op=add">Add</a>
+<a href="productspage?op=search">Search (code)</a>
 </div>

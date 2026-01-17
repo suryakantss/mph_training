@@ -30,6 +30,14 @@ public class ProductPageController extends HttpServlet {
 			req.setAttribute("code", code);
 			req.getRequestDispatcher("WEB-INF/view/productdeleted.jsp").forward(req, resp);
 		}
+		else if (req.getParameter("op").equals("search")) {
+			req.getRequestDispatcher("WEB-INF/view/productsearch.jsp").forward(req, resp);
+		}
+		else if (req.getParameter("op").equals("dosearch")) {
+			Product p = productService.getProduct(req.getParameter("code"));
+			req.setAttribute("product", p);
+			req.getRequestDispatcher("WEB-INF/view/productsearch.jsp").forward(req, resp);
+		}
 	}
 	
 	@Override

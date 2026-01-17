@@ -71,5 +71,25 @@ public class ProductDAO {
 		}
 		return products;
 	}
+	public Product findByCode(String code) {
+		Connection con = ConnectionUtil.getConnection();
+		String sql = "select * from products where code=?";
+		Product product = null;
+		try {
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1, code);
+			ResultSet rs = stmt.executeQuery();
+			if (rs.next()) {
+				product =  new Product(rs.getString("code"), rs.getString("name"), rs.getInt("price"));
+			}
+			rs.close();
+			stmt.close();
+			con.close();
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+			return null;
+		}
+		return product;
+	}
 
 }

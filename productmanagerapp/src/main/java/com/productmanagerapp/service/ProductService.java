@@ -11,6 +11,9 @@ public class ProductService {
 	public List<Product> getProducts() {
 		return productDAO.findAll();
 	}
+	public Product getProduct(String code) {
+		return productDAO.findByCode(code);
+	}
 
 	public Product addProduct(Product product) {
 		return productDAO.save(product);
